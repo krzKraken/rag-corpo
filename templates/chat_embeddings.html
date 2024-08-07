@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatGPT</title>
+  </head>
+  <body>
+    <h1>Preguntar a Base de datos</h1>
+    <form method="POST" action="/chat_embeddings">
+      <label for="question">Pregunta:</label>
+      <input type="text" id="question" name="question" required />
+      <button type="submit">Enviar</button>
+    </form>
+
+    {% if question %}
+    <h2>Pregunta enviada: {{ question }}</h2>
+    <!-- Aquí puedes mostrar la respuesta de ChatGPT -->
+    <h2>Respuesta del embedding</h2>
+    <p>{{ answer }}</p>
+    {% endif %}
+  </body>
+</html>
